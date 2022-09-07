@@ -24,11 +24,10 @@
  import { LoginButton, AccessToken, LoginManager, Profile, Settings } from 'react-native-fbsdk-next';
  import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
  import database from '@react-native-firebase/database';
- 
  const Login = () => {
    const dispatch = useDispatch();
   useEffect(()=> {
-    dispatch(onSetUserInfo(null))
+    // dispatch(onSetUserInfo(null))
   },[])
 
   const loginFacebook = async () => {

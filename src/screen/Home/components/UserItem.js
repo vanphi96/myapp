@@ -11,17 +11,16 @@
    StyleSheet,
    Text,
    View,
+   TouchableOpacity,
   Image
  } from 'react-native';
  
  const UserItem = (props) => {
-  console.log('item user');
-  console.log(props);
    return (
-     <View style={styles.item} key={props.data.id}>
+     <TouchableOpacity onPress={() => props.onPressItem(props.data)} style={styles.item} key={props.data.id}>
         <Image style={styles.image} source={{uri: props.data.avatar}}/>
         <Text style={styles.name}>{props.data.name}</Text>
-     </View>
+     </TouchableOpacity>
    );
  };
   
